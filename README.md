@@ -37,7 +37,7 @@ Or install it yourself as:
 Hyper made this. We're a digital communications agency with a passion for good code,
 and if you're using this library we probably want to hire you.
 
-Also thanks to https://github.com/Hakon/yr_api for inspiratin and some code.
+Also thanks to https://github.com/Hakon/yr_api for inspiration and some code.
 
 ## License
 
