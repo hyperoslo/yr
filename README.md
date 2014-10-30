@@ -24,6 +24,15 @@ Or install it yourself as:
 
 ## Usage
 
+```
+oslo = Yr::Place.find "Oslo"
+oslo.forecast.days.each do |day|
+  p day.name
+  p day.date
+  p day.temperature.value
+end
+```
+
 ## Contributing
 
 1. Fork it
