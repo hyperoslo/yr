@@ -1,2 +1,2 @@
 require 'yr'
-require 'rspec/its'
+require 'rspec'
