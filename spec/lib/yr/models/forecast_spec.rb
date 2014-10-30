@@ -20,6 +20,12 @@ describe Yr::Forecast do
 
       expect(day.name).to eq("Thursday")
       expect(day.description).to eq("<strong>Østlandet og Telemark:</strong> Skiftende bris. Pent vær, tilskyende fra sør utover ettermiddagen, men fortsatt opphold.")
+      expect(day.temperature.unit).to eq("celsius")
+      expect(day.temperature.value).to eq(7)
+      expect(day.symbol.id).to eq("03d")
+      expect(day.precipitation).to eq(0)
+      expect(day.pressure.unit).to eq("hPa")
+      expect(day.pressure.value).to eq(1022)
     end
   end
 
