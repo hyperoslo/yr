@@ -24,14 +24,14 @@ module Yr
 
     def parse_location
       location = @xml.xpath("//weatherdata/location").first
-      name = location.xpath("//name").first.text
-      country = location.xpath("//country").first.text
+      name = location.xpath("name").first.text
+      country = location.xpath("country").first.text
       Location.new(name, country)
     end
 
     def parse_credit
       location = @xml.xpath("//weatherdata/credit").first
-      link = location.xpath("//link").first
+      link = location.xpath("link").first
       link
     end
 
@@ -41,8 +41,8 @@ module Yr
       times = @xml.xpath("//forecast/text/location/time")
       times.each do |time|
         # Fetched from the text time nodes.
-        name          = time.xpath("//title").first.text
-        description   = time.xpath("//body").first.text
+        name          = time.xpath("title").first.text
+        description   = time.xpath("body").first.text
         date          = Date.parse time["from"]
 
         # Fetch more detailed data for each period of the day

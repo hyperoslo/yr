@@ -26,6 +26,8 @@ describe Yr::Forecast do
       expect(day.precipitation).to eq(0)
       expect(day.pressure.unit).to eq("hPa")
       expect(day.pressure.value).to eq(1022)
+
+      expect(days[1].name).to eq("Friday")
     end
   end
 
