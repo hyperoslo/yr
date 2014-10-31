@@ -9,3 +9,4 @@ require 'rspec'
 # end with _spec.rb. You can configure this pattern with the --pattern
 # option on the command line or in ~/.rspec, .rspec or `.rspec-local`.
 Dir[File.join(Yr.root, "spec/support/**/*.rb")].each { |f| require f }
+Dir[File.join(Yr.root, "spec/factories/**/*.rb")].each { |f| require f }

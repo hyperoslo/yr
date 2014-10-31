@@ -1,4 +1,5 @@
 require 'open-uri'
+require 'yaml'
 
 module Yr
   class Place
