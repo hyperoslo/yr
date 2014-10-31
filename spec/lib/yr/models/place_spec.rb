@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Yr::Place do
-  subject { Yr::Place.find "Oslo" }
+  subject { build :place }
 
   describe ".find" do
     it "returns a place" do

@@ -5,8 +5,10 @@ module Yr
   class Place
     attr_accessor :county, :municipality, :place, :forecast
 
-    def initialize(opts)
-      opts.each{|k,v| self.send("#{k}=", v)}
+    def initialize(opts=nil)
+      if opts
+        opts.each{|k,v| self.send("#{k}=", v)}
+      end
     end
 
     def forecast
