@@ -16,7 +16,7 @@ module Yr
     end
 
     def forecast_url
-      "http://www.yr.no/place/Norway/#{URI.encode(county.capitalize)}/#{URI.encode(municipality.capitalize)}/#{URI.encode(place.capitalize)}/forecast.xml"
+      "#{Yr.api_endpoint}#{URI.encode(county.capitalize)}/#{URI.encode(municipality.capitalize)}/#{URI.encode(place.capitalize)}/forecast.xml"
     end
 
     def fetch_forecast

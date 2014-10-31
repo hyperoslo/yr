@@ -2,6 +2,7 @@ require 'yr/version'
 
 require 'nokogiri'
 
+require 'yr/configuration'
 require 'yr/models/place'
 require 'yr/models/forecast'
 require 'yr/models/location'
@@ -12,6 +13,30 @@ require 'yr/models/pressure'
 require 'yr/models/symbol'
 
 module Yr
+  class << self
+    attr_accessor :configuration
+  end
+
+  def self.configuration
+    @configuration ||= Configuration.new
+  end
+
+  def self.reset
+    @configuration = Configuration.new
+  end
+
+  def self.configure
+    yield(configuration)
+  end
+
+  def self.api_endpoint
+    if Yr.configuration.language == "no"
+      "http://www.yr.no/sted/Norge/"
+    else
+      "http://www.yr.no/place/Norway/"
+    end
+  end
+
   def self.root
     File.dirname __dir__
   end
