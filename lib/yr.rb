@@ -30,7 +30,7 @@ module Yr
   end
 
   def self.api_endpoint
-    if Yr.configuration.language == "no"
+    if configuration.language and configuration.language.to_sym == :no
       "http://www.yr.no/sted/Norge/"
     else
       "http://www.yr.no/place/Norway/"

@@ -18,7 +18,7 @@ describe Yr do
     context "norwegian" do
       before do
         Yr.configure do |config|
-          config.language = "no"
+          config.language = :no
         end
       end
 

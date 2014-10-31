@@ -3,7 +3,7 @@ module Yr
     attr_accessor :language
 
     def initialize
-      @languge = "en"
+      @languge = :en
     end
 
   end
