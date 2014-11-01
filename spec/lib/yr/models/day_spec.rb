@@ -26,18 +26,26 @@ describe Yr::Day do
   end
 
   describe "#temperature" do
-    it "returns the temperature for day period"
+    it "returns the temperature for day period" do
+      expect(subject.temperature).to eq(period2.temperature)
+    end
   end
 
   describe "#symbol" do
-    it "returns the symbol for day period"
+    it "returns the symbol for day period" do
+      expect(subject.symbol).to eq(period2.symbol)
+    end
   end
 
   describe "#pressure" do
-    it "returns the pressure for day period"
+    it "returns the pressure for day period" do
+      expect(subject.pressure).to eq(period2.pressure)
+    end
   end
 
   describe "#precipitation" do
-    it "returns the precipitation for day period"
+    it "returns the precipitation for day period" do
+      expect(subject.precipitation).to eq(period2.precipitation)
+    end
   end
 end
