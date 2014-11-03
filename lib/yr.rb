@@ -4,6 +4,7 @@ require 'nokogiri'
 
 require 'yr/configuration'
 require 'yr/models/place'
+require 'yr/models/zip_code'
 require 'yr/models/forecast'
 require 'yr/models/location'
 require 'yr/models/day'
