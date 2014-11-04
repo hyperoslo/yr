@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0.5,0.5)">
+    <g>
+      <defs>
+        <style type="text/css"><![CDATA[symbol { overflow: visible; }]]></style>
+        <symbol id="01m">
+          <use xlink:href="#polarnight"></use>
+        </symbol>
+        <symbol id="polarnight">
+          <polygon id="polarnight-outer" fill="url(#polarnight-grad-outer)" stroke="#F9991D" stroke-miterlimit="10" points="87.9,50 67.5,57.2   76.8,76.8 57.2,67.5 50,87.9 42.8,67.5 23.2,76.8 32.5,57.2 12.1,50" />
+          <path id="polarnight-inner" fill="url(#polarnight-grad-inner)" d="M67.5,50c0,9.699-7.8,17.5-17.5,17.5S32.5,59.699,32.5,50H67.5z" />
+          <line id="horizon" fill="none" stroke="#6D6E6D" stroke-width="3" stroke-miterlimit="10" x1="8.5" y1="50" x2="91.5" y2="50" />
+        </symbol>
+        <radialGradient id="polarnight-grad-inner" cx="21.2925" cy="70.7588" r="0.8962" gradientTransform="matrix(25.0183 0 0 -25.0183 -488.2279 1815.0579)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" style="stop-color:#FFEEC7" />
+          <stop offset="0.0056" style="stop-color:#FFEEC7" />
+          <stop offset="0.113" style="stop-color:#FFE7A8" />
+          <stop offset="0.3464" style="stop-color:#FFD45A" />
+          <stop offset="0.4494" style="stop-color:#FFCB35" />
+          <stop offset="1" style="stop-color:#EB911F" />
+        </radialGradient>
+        <radialGradient id="polarnight-grad-outer" cx="1041.7725" cy="1531.9492" r="40.275" gradientTransform="matrix(1 0 0 1 -990 -1482)" gradientUnits="userSpaceOnUse">
+          <stop offset="0.0056" style="stop-color:#EB911F" />
+          <stop offset="0.175" style="stop-color:#ED9621" />
+          <stop offset="0.3726" style="stop-color:#F2A426" />
+          <stop offset="0.5835" style="stop-color:#FABB2F" />
+          <stop offset="0.6966" style="stop-color:#FFCB35" />
+        </radialGradient>
+      </defs>
+      <g transform="translate(0,0)">
+        <g transform="scale(1)">
+          <use xlink:href="#01m" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

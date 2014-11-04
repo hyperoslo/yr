@@ -2,6 +2,7 @@ require 'yr/version'
 
 require 'nokogiri'
 
+require "yr/engine"
 require 'yr/configuration'
 require 'yr/models/place'
 require 'yr/models/zip_code'

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0.5,0.5)">
+    <g>
+      <defs>
+        <style type="text/css"><![CDATA[symbol { overflow: visible; }]]></style>
+        <symbol id="15">
+          <use xlink:href="#cloud-fog"></use>
+        </symbol>
+        <symbol id="cloud-fog">
+          <use xlink:href="#cloud-inner-stroke-template" style="fill:#C3C3C2"></use>
+        </symbol>
+        <symbol id="cloud-inner-stroke-template">
+          <path d="M82.13,69.175c5.58,0,10.08-4.5,10.08-10.08c0-5.31-4.05-9.63-9.18-9.99   c-0.541-8.91-8.011-15.93-17.011-15.93c-4.59,0-8.729,1.8-11.789,4.68c-1.53-5.04-6.121-8.64-11.611-8.64c-3.6,0-6.75,1.53-9,3.96   c-1.08-0.72-2.339-1.17-3.689-1.17c-3.33,0-6.12,2.61-6.39,5.94c-4.77,0.09-8.64,3.959-8.64,8.82c0,0.18,0,0.27,0,0.45   c-2.52,0.81-4.23,3.15-4.23,5.94c0,0.18,0,0.27,0,0.45c-2.88,1.26-4.95,4.14-4.95,7.47c0,4.5,3.6,8.1,8.1,8.1   S78.89,69.175,82.13,69.175z" />
+        </symbol>
+      </defs>
+      <g transform="translate(0,0)">
+        <g transform="scale(1)">
+          <use xlink:href="#15" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -33,6 +33,22 @@ oslo.forecast.days.each do |day|
 end
 ```
 
+If you are using Rails, all the weather symbols are included in the assets
+pipeline, both svg and png formats. This means you can do something like this
+if you want to display an icon `<%= image_tag day.symbol.svg %>` or
+`<%= image_tag day.symbol.png %>`.
+
+PNG files are included in several sizes, which you can specify like this
+`<%= image_tag day.symbol.png(size: 100) %>`.
+
+The supported png sizes are:
+
+* 30px
+* 38px
+* 48px (default)
+* 100px
+* 200px
+
 ## Contributing
 
 1. Fork it
