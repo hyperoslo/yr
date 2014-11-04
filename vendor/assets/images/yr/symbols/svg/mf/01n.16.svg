@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 100 100" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0.5,0.5)">
+    <g>
+      <defs>
+        <style type="text/css"><![CDATA[symbol { overflow: visible; }]]></style>
+        <symbol id="01n.160">
+          <path d="M 50,23.9 A 9.4,26.1 0 0 1 50.0,76.1 A 26.1,26.1 0 0 0 50.0,23.9 Z" stroke-linejoin="round" stroke-width="3" stroke="#f4e501" fill="#fff88a" />
+        </symbol>
+      </defs>
+      <g transform="translate(0,0)">
+        <g transform="scale(1)">
+          <use xlink:href="#01n.160" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
