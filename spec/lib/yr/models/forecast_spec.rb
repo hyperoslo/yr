@@ -29,6 +29,26 @@ describe Yr::Forecast do
 
       expect(days[1].name).to eq("Friday")
     end
+
+    context "first day has no periods" do
+      let(:xml) { Nokogiri::XML(fixture("/forecast_no_periods.xml")) }
+      subject { Yr::Forecast.new(xml) }
+
+      it "skips the first day" do
+        days = subject.parse_forecast
+        day = days.first
+
+        expect(day.name).to eq("Tuesday")
+        expect(day.temperature.unit).to eq("celsius")
+        expect(day.temperature.value).to eq(3)
+        expect(day.symbol.id).to eq("02d")
+        expect(day.precipitation).to eq(0)
+        expect(day.pressure.unit).to eq("hPa")
+        expect(day.pressure.value).to eq(1022)
+
+        expect(days[2].name).to eq("Thursday")
+      end
+    end
   end
 
   describe "#parse_credit" do

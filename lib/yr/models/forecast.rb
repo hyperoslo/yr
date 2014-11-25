@@ -48,35 +48,38 @@ module Yr
         # Fetch more detailed data for each period of the day
         periods = []
         # Use the xpath start-with syntax to find periods that starts with the same date
-        @xml.xpath("//forecast/tabular/time[starts-with(@from, \"#{date}\")]").each do |xml|
-          symbol        = Symbol.new
-          symbol.id     = xml.xpath("symbol").first["var"]
-          symbol.number = xml.xpath("symbol").first["numberEx"]
-          symbol.name   = xml.xpath("symbol").first["name"]
+        tabular_data = @xml.xpath("//forecast/tabular/time[starts-with(@from, \"#{date}\")]")
+        unless tabular_data.empty?
+          tabular_data.each do |xml|
+            symbol        = Symbol.new
+            symbol.id     = xml.xpath("symbol").first["var"]
+            symbol.number = xml.xpath("symbol").first["numberEx"]
+            symbol.name   = xml.xpath("symbol").first["name"]
 
-          precipitation = xml.xpath("precipitation").first["value"].to_i
+            precipitation = xml.xpath("precipitation").first["value"].to_i
 
-          temperature = Temperature.new
-          temperature.unit = xml.xpath("temperature").first["unit"]
-          temperature.value = xml.xpath("temperature").first["value"].to_i
+            temperature = Temperature.new
+            temperature.unit = xml.xpath("temperature").first["unit"]
+            temperature.value = xml.xpath("temperature").first["value"].to_i
 
-          pressure = Pressure.new
-          pressure.unit = xml.xpath("pressure").first["unit"]
-          pressure.value = xml.xpath("pressure").first["value"].to_i
+            pressure = Pressure.new
+            pressure.unit = xml.xpath("pressure").first["unit"]
+            pressure.value = xml.xpath("pressure").first["value"].to_i
 
-          period = Period.new
-          period.id = xml["period"].to_i
-          period.symbol = symbol
-          period.precipitation = precipitation
-          period.temperature = temperature
-          period.pressure = pressure
-          period.from = DateTime.parse xml["from"]
-          period.to = DateTime.parse xml["to"]
+            period = Period.new
+            period.id = xml["period"].to_i
+            period.symbol = symbol
+            period.precipitation = precipitation
+            period.temperature = temperature
+            period.pressure = pressure
+            period.from = DateTime.parse xml["from"]
+            period.to = DateTime.parse xml["to"]
 
-          periods << period
+            periods << period
+          end
+
+          days << Day.new(name, description, date, periods)
         end
-
-        days << Day.new(name, description, date, periods)
       end
 
       days
